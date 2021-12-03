@@ -27,6 +27,7 @@ class database:
 		return cls(conn)
 
 	async def does_player_exist(self, discord_id):
+		discord_id = str(discord_id)
 		cur = self.conn.cursor()
 		await cur.execute(
 			"SELECT * FROM players WHERE id=%s",
@@ -38,6 +39,7 @@ class database:
 		return len(player) != 0
 
 	async def create_player(self, discord_id, character_name):
+		discord_id = str(discord_id)
 		cur = self.conn.cursor()
 		await cur.execute(
 			"""
@@ -49,6 +51,7 @@ class database:
 		await self.conn.commit()
 
 	async def delete_player(self, discord_id):
+		discord_id = str(discord_id)
 		cur = self.conn.cursor()
 		await cur.execute(
 			"DELETE FROM players WHERE id=%s",
@@ -59,6 +62,7 @@ class database:
 		await self.conn.commit()
 
 	async def get_player(self, discord_id):
+		discord_id = str(discord_id)
 		cur = self.conn.cursor()
 		await cur.execute(
 			"SELECT (character_name) FROM players WHERE id=%s",
@@ -99,6 +103,7 @@ class database:
 		return player
 
 	async def create_unit(self, discord_id, name, life, damage, tags):
+		discord_id = str(discord_id)
 		cur = self.conn.cursor()
 		await cur.execute(
 			"INSERT INTO units (player_id, name, life, damage, tags) VALUES(%s, %s, %s, %s, %s) RETURNING id",
