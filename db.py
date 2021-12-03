@@ -12,7 +12,7 @@ db_host = os.environ["DB_HOST"]
 db_port = os.environ["DB_PORT"]
 
 
-# creeate using Database.create()
+# creeate using database.create()
 class database:
 	def __init__(self, conn):
 		self.conn = conn
