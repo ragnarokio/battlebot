@@ -98,7 +98,6 @@ class database:
 
 		return player
 
-	# TODO: make sure this works
 	async def create_unit(self, discord_id, name, life, damage, tags):
 		cur = self.conn.cursor()
 		await cur.execute(
