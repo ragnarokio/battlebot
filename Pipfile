@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 python-dotenv = "*"
 psycopg = {extras = ["binary"], version = "*"}
-"discord.py" = {editable = true, ref = "v1.7.3", git = "https://github.com/Pycord-Development/pycord"}
+"py-cord" = {editable = true, ref = "b872cfea1f23673b97bd6027ebde5c2e4472afea", git = "https://github.com/Pycord-Development/pycord"}
 
 [dev-packages]
 
