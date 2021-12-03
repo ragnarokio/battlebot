@@ -10,6 +10,11 @@ db_password = os.environ["DB_PASSWORD"]
 db_host = os.environ["DB_HOST"]
 db_port = os.environ["DB_PORT"]
 
-con = psycopg.connect(
-    database=db_name, user=db_user, password=db_password, host=db_host, port=db_port
-)
+
+class Database:
+	@classmethod
+	async def create(self):
+		# connect to db
+		self.conn = await psycopg.AsyncConnection.connect(
+			f"dbname={db_name} user={db_user} host={db_host} port={db_port} password={db_password}"
+		)
