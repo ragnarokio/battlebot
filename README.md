@@ -1,4 +1,8 @@
 # autobattlebot
+
+## installing dependencies
+this project uses pipenv to manage dependencies.  
+install it using the instructions at https://pypi.org/project/pipenv/, then use `pipenv install` to install dependencies, and `pipenv shell` to enter the virtualenv
  
 
 ## setting up the db

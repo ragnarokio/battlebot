@@ -6,6 +6,6 @@ load_dotenv()
 
 token = os.environ['DISCORD_TOKEN']
 
-bot = discord.Client()
+bot = discord.Bot()
 
 bot.run(token)

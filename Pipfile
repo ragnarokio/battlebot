@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-dotenv = "*"
+psycopg = {extras = ["binary"], version = "*"}
+"discord.py" = {editable = true, ref = "v1.7.3", git = "https://github.com/Pycord-Development/pycord"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
